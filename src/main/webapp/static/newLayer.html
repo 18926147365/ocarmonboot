@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<style>
+.newLayer{
+  width: 60%;
+  height:45px;
+  border-radius: 10px;
+  padding: 5%;
+  background:rgba(0,0,0,0.8);
+  color:red;
+  font-size:16px;
+  position:absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  margin:auto;
+  text-align: center;
+  display: none;
+  z-index: 999;
+}
+</style>
+<body>
+    <span class='newLayer'></span>
+</body>
+<script>
+    function newLayer(text){
+       $('.newLayer').delay(150).show(10);
+       $('.newLayer').delay(2000).hide(10);
+       $('.newLayer').html(text);
+   };
+</script>
+</html>

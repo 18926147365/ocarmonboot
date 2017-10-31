@@ -1,0 +1,27 @@
+body {
+			background-color: black;
+		}
+#canvas{
+	width: 16rem;
+    position: absolute;
+    margin-left: 3.3rem;
+}		
+
+#copypassword{
+	    border: none;
+    border-radius: 2rem;
+    width: 10rem;
+    height: 3rem;
+    position: absolute;
+    top: 20rem;
+    left: 7rem;
+    color: #000000;
+     background-color: #FFFFF0;
+}
+.title_wifi{
+	    color: #FFFD99;
+   
+    text-align: center;
+    font-size: 1.3rem;
+	
+}
