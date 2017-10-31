@@ -83,7 +83,7 @@ public class MainController extends HttpServlet{
 	@RequestMapping("/runs")
 	public String runs(){
 		System.out.println("查询数据....");
-	    List<Map<String, Object>> tokenList=jdbcTemplate.queryForList("SELECT url_Token FROM `user` ORDER BY create_time  LIMIT "+0+",20");
+	    List<Map<String, Object>> tokenList=jdbcTemplate.queryForList("SELECT url_Token FROM `user` ORDER BY create_time DESC LIMIT "+0+",20");
 		for (Map<String, Object> map : tokenList) {
 			String url_token=map.get("url_token")+"";
 			Common.QUEUETOKENUSER.offer(url_token);
@@ -135,7 +135,7 @@ public class MainController extends HttpServlet{
 						if(Common.SUCCESSCOUNT>300){
 							try {
 								System.out.println(sdf.format(new Date()) +" 线程"+(index+1)+"暂停,防止封IP");
-								Thread.sleep(1000*30*60);
+								Thread.sleep(1000*10*60);
 								Common.SUCCESSCOUNT=0;
 							} catch (InterruptedException e) {
 								e.printStackTrace();
